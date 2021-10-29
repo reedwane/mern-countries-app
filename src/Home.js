@@ -3,7 +3,9 @@ import CountriesList from "./CountriesList";
 import lens from "./lens-black.png";
 
 const Home = () => {
-	const [url, setUrl] = useState("https://restcountries.com/v3.1/all");
+	const [url, setUrl] = useState(
+		"https://reed-countries-api.herokuapp.com/all",
+	);
 	const [search, setSearch] = useState("");
 	const [filter, setFilter] = useState("");
 
@@ -12,11 +14,11 @@ const Home = () => {
 		if (filter) {
 			if (filter === "all") {
 				//reseting the url to get data for all countries
-				setUrl("https://restcountries.com/v3.1/all");
+				setUrl("https://reed-countries-api.herokuapp.com/all");
 			} else {
 				//setting the url to get the data for the selected region based on the filter value
 				console.log(filter);
-				setUrl("https://restcountries.com/v3.1/region/" + filter);
+				setUrl("https://reed-countries-api.herokuapp.com/" + filter);
 			}
 		}
 	}, [filter]);
@@ -31,7 +33,12 @@ const Home = () => {
 						onClick={() => {
 							// making the search icon respond to click events and search
 							if (search !== "") {
-								setUrl("https://restcountries.com/v3.1/name/" + search);
+								setUrl(
+									"https://reed-countries-api.herokuapp.com/" +
+										filter +
+										"/" +
+										search,
+								);
 							}
 						}}
 					/>
@@ -46,7 +53,12 @@ const Home = () => {
 						onKeyUp={(e) => {
 							if (e.key === "Enter" && search !== "") {
 								// this changes the url to fetch from when a search value is entered
-								setUrl("https://restcountries.com/v3.1/name/" + search);
+								setUrl(
+									"https://reed-countries-api.herokuapp.com/" +
+										filter +
+										"/" +
+										search,
+								);
 							}
 						}}
 						placeholder="Search for a country by name..."

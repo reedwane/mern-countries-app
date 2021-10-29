@@ -11,11 +11,11 @@ function App() {
 			<div className="App">
 				<Header />
 				<Switch>
-					<Route exact path="/react-rest-countries">
+					<Route exact path="/mern-countries-app">
 						<Home />
 					</Route>
 
-					<Route path="/react-rest-countries/:country">
+					<Route path="/mern-countries-app/:country">
 						<CountryDetail />
 					</Route>
 

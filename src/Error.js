@@ -5,7 +5,7 @@ const Error = () => {
 		<div className="error">
 			<h2>Page not found</h2>
 
-			<Link to="/react-rest-countries">
+			<Link to="/mern-countries-app">
 				<p>Back to home page</p>
 			</Link>
 		</div>

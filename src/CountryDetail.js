@@ -4,13 +4,13 @@ import useFetch from "./useFetch";
 
 const CountryDetail = () => {
 	const { country } = useParams(); //gets the cca3 code from the url clicked to know which specific country is clicked
-	let url = "https://restcountries.com/v3.1/alpha/" + country; //sets the url for that country
+	let url = "https://reed-countries-api.herokuapp.com/code/" + country; //sets the url for that country
 
 	const { data, loading, error } = useFetch(url);
 
 	return (
 		<div className="specific">
-			<Link to="/react-rest-countries">
+			<Link to="/mern-countries-app">
 				<p className="home">&#8592; Back</p>
 			</Link>
 
@@ -19,7 +19,7 @@ const CountryDetail = () => {
 			{error && (
 				<div>
 					<h2>Could not get country details</h2>
-					<Link to="/react-rest-countries">Back to homepage</Link>
+					<Link to="/mern-countries-app">Back to homepage</Link>
 				</div>
 			)}
 

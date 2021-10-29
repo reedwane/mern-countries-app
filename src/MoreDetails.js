@@ -4,26 +4,14 @@ const MoreDetails = (props) => {
 	// details is the data for the specific country clicked passed down as a prop
 	const details = props.data;
 
-	// this is done as there are distinct keys for native names for each country
-	let nativeNameKey = Object.keys(details.name.nativeName)[0];
-	let nativeName = details.name.nativeName[nativeNameKey].official;
-
-	// we need the keys for the languages as well
-	let lang = Object.keys(details.languages);
-	let languages = [];
-	for (let i = 0; i < lang.length; i++) {
-		//pushing the languages into an array
-		languages.push(details.languages[lang[i]]);
-	}
-
 	return (
 		<div className="more-detail">
-			<img src={details.flags.png} alt={(details.name.official, "flag")} />
+			<img src={details.flag} alt={(details.name, "flag")} />
 
 			<div className="one">
-				<h2 className="country-name">{details.name.official}</h2>
+				<h2 className="country-name">{details.name}</h2>
 				<p className="native-name">
-					Native Name: <span className="tag">{nativeName}</span>
+					Native Name: <span className="tag">{details.nativeName}</span>
 				</p>
 
 				<p className="population">
@@ -40,14 +28,14 @@ const MoreDetails = (props) => {
 
 			<div className="two">
 				<p className="domain">
-					Top Level Domain: <span className="tag">{details.tld}</span>
+					Top Level Domain:{" "}
+					<span className="tag">{details.topLevelDomain}</span>
 				</p>
 				<p className="currencies">
-					Currencies:{" "}
-					<span className="tag">{Object.keys(details.currencies)[0]}</span>
+					Currencies: <span className="tag">{details.currency}</span>
 				</p>
 				<p className="language">
-					Languages: <span className="tag">{languages.join(", ")}</span>
+					Languages: <span className="tag">{details.languages.join(", ")}</span>
 				</p>
 			</div>
 

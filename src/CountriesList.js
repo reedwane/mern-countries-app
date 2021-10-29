@@ -19,14 +19,10 @@ const CountriesList = (props) => {
 							key={country.cca3}
 							id={country.cca3}
 						>
-							<Link to={"/react-rest-countries/" + country.cca3}>
-								<img
-									className="flag"
-									src={country.flags.png}
-									alt={country.name.common}
-								/>
+							<Link to={"/mern-countries-app/" + country.cca3}>
+								<img className="flag" src={country.flag} alt={country.name} />
 								<div className="detail">
-									<h2 className="country-name">{country.name.common}</h2>
+									<h2 className="country-name">{country.name}</h2>
 									<p className="population">
 										Populaton:{" "}
 										<span className="tag">
