@@ -7,7 +7,7 @@ const Home = () => {
 		"https://reed-countries-api.herokuapp.com/all",
 	);
 	const [search, setSearch] = useState("");
-	const [filter, setFilter] = useState("");
+	const [filter, setFilter] = useState("all");
 
 	// this is to change the url only when the filter value gets updated
 	useEffect(() => {
@@ -17,7 +17,6 @@ const Home = () => {
 				setUrl("https://reed-countries-api.herokuapp.com/all");
 			} else {
 				//setting the url to get the data for the selected region based on the filter value
-				console.log(filter);
 				setUrl("https://reed-countries-api.herokuapp.com/" + filter);
 			}
 		}
