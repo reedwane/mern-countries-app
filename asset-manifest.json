@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/mern-countries-app/static/css/main.30736919.chunk.css",
-    "main.js": "/mern-countries-app/static/js/main.ab7af0ec.chunk.js",
-    "main.js.map": "/mern-countries-app/static/js/main.ab7af0ec.chunk.js.map",
+    "main.js": "/mern-countries-app/static/js/main.e0ad7520.chunk.js",
+    "main.js.map": "/mern-countries-app/static/js/main.e0ad7520.chunk.js.map",
     "runtime-main.js": "/mern-countries-app/static/js/runtime-main.0f41b96a.js",
     "runtime-main.js.map": "/mern-countries-app/static/js/runtime-main.0f41b96a.js.map",
     "static/js/2.bedccb2c.chunk.js": "/mern-countries-app/static/js/2.bedccb2c.chunk.js",
@@ -16,6 +16,6 @@
     "static/js/runtime-main.0f41b96a.js",
     "static/js/2.bedccb2c.chunk.js",
     "static/css/main.30736919.chunk.css",
-    "static/js/main.ab7af0ec.chunk.js"
+    "static/js/main.e0ad7520.chunk.js"
   ]
 }
